@@ -1,0 +1,46 @@
+p{
+	color: green;
+	background-color: grey;
+	text-align: center;
+}
+span{
+	/*text-styles*/
+	text-align: center;
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	/*1em = font-size of the element*/
+	padding: 1em;
+	/*1rem = font-size of the root element i.e., html*/
+	margin: 1rem;
+}
+
+/*box-model*/
+/*
+margin
+
+border
+
+padding
+
+content
+
+padding
+
+border
+
+margin*/
+
+a{
+	/*padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;*/
+	padding: 5px 10px 15px 20px;
+	margin: 10px 20px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: grey;
+}
+
+/*selector*/

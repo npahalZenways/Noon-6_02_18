@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Css styles</title>
+	<!-- Internal style sheet -->
+	<!-- <style type="text/css">
+		p{
+			color: white;
+			background-color: blue;
+		}
+	</style> -->
+	<!-- External style sheet -->
+	<!-- <link rel="stylesheet" type="text/css" href="./styles.css"> -->
+	
+	<style type="text/css">
+	/*tag-name selector*/
+		p{
+			color: white;
+			background-color: black;
+		}
+		/*class name selector*/
+		p.myclass{
+			color: grey;
+			background-color: black;
+		}
+		/*id selector*/
+		#ParaId{
+			color: white;
+			background-color: red;
+		}
+		/*selects all paragraphs inside div*/
+		div p{
+			font-size: 22px;
+			font-weight: bold;
+		}
+		/*select all p tags where parent is section whose parent is div*/
+		div section p{
+			font-size: 10px;
+			font-weight: normal;
+		}
+		/*Select all p tags which are immediately after section*/
+		.mysection + p{
+			border: 1px solid red;
+		}
+		/*attribute selectors*/
+		[href="#"]{
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+	<!-- Inline style sheet -->
+	<p style="color: red; background-color: yellow">This is styled para</p>
+	<p>This is para styled by internal style sheet</p>
+	<span>This is a span tag</span>
+	<!-- <a href="#">This is a link</a> -->
+	<a href="#">This is a link</a>
+	<p class="myclass">Third para</p>
+	<p class="myclass">Third para</p>
+	<p class="myclass">Third para</p>
+	<p class="myclass" id="ParaId">Third para</p>
+	<p class="myclass">Third para</p>
+	<div class="myclass">My division</div>
+	<div>
+		<p>
+			Para inside div
+		</p>
+		<section class="mysection">
+			<p>
+				Para inside inner section
+			</p>
+		</section>
+		<p>
+			Para after section
+		</p>
+		<p>
+			Para not immediately after section
+		</p>
+	</div>
+	<a href="">Blank</a>
+	<a href="#">Only #</a>
+</body>
+</html>

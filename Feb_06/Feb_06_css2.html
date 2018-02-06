@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Css 2</title>
+	<style type="text/css">
+		table, th, td{
+			/*border: 1px solid;*/
+			/*border-spacing: 0px;*/
+			/*border-collapse: collapse;
+			padding: 5px;
+			width: 500px;
+			text-align: center;*/
+		}
+		/*tr:first-child{
+			background-color: grey;
+			color:white;
+		}*//*
+		tr:last-child{	
+			background-color: black;
+			color: white;
+		}*/
+		/*even, odd, number*/
+		/*tr:nth-child(2){
+			color: white;
+			background-color: green;
+		}
+		tr:hover{
+			color: grey;
+			background-color: black
+		}*/
+	</style>
+	<style type="text/css">
+		table{
+			width: 500px;
+			border-collapse: collapse;
+		}
+		td, th{
+			text-align: center;
+			padding: 5px 10px;
+			border-bottom: 1px solid #eee;
+		}
+		thead tr{
+			background-color: black;
+			color: #eee;
+		}
+		tbody tr:hover{
+			background-color: #eee;
+		}
+		div.inline{
+			display: inline-block;
+		}
+		div.float{
+			background-color: blue;
+		}
+		div.float p{
+			float: right;
+		}
+		ul{
+			list-style-type: none;
+		}
+		ul li{
+			display: inline-block;
+			border: 1px solid grey;
+			border-radius: 5px;
+			padding: 5px 10px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Phone
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					Nitin
+				</td>
+				<td>
+					98765
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Nitin
+				</td>
+				<td>
+					98765
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Nitin
+				</td>
+				<td>
+					98765
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="inline">
+		<p>This is para inside first div</p>
+	</div>
+	<div class="inline">
+		<p>This is para inside second div</p>
+	</div>
+	<div class="float">
+		<p>Para inside last div</p>
+	</div>
+	<ol type="i">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+	</ol>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+	</ul>
+</body>
+</html>
