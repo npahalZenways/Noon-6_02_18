@@ -1,0 +1,127 @@
+<!-- html - hyper text markup language -->
+<!doctype HTML>
+<html>
+	<head>
+		<!-- Information of page -->
+		<!-- information in meta tags -->
+		<!-- we can include scripts in head -->
+		<!-- we can include external css files and internal css in head -->
+		<title>My first web page</title>
+		<style type="text/css">
+			table, th, td{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- document - which is displyaed on the web browser -->
+		<p>This is a paragraph</p>
+
+		<!-- here href is an attribute of a tag -->
+		<a href="http://www.google.com" target="_blank">This is a link</a>
+		<br>
+		<a href="#">This is second link</a>
+		<div>
+			This is a division
+		</div>
+		<h1>
+			This is a heading tag
+		</h1>
+		<h3>
+			This is h3 tag
+		</h3>
+		<h6>
+			This is h6 tag
+		</h6>
+		<table>
+			<tr>
+				<th rowspan="6">Data</th>
+				<th>Name</th>
+				<th colspan="2">Phone</th>
+			</tr>
+			<tr>
+				<td>Nitin</td>
+				<td>987654</td>
+				<td>987654</td>
+			</tr>
+			<tr>
+				<td>Nitin</td>
+				<td>987654</td>
+				<td>987654</td>
+			</tr>
+			<tr>
+				<td>Nitin</td>
+				<td>987654</td>
+				<td>987654</td>
+			</tr>
+			<tr>
+				<td>Nitin</td>
+				<td>987654</td>
+				<td>987654</td>
+			</tr>
+			<tr>
+				<td>Nitin</td>
+				<td>987654</td>
+				<td>987654</td>
+			</tr>
+		</table>
+		<br>
+		<form>
+			<div>
+				<label for="myinput">Name: </label>
+				<input type="text" maxlength="15" placeholder="Enter name" minlength="3" id="myinput" name="name">
+			</div>
+			<br>
+			<div>
+				<label for="email">Email: </label>
+				<input type="email" required disabled id="email" name="email">
+			</div>
+			<br>
+			<div>
+				<label for="password">Password: </label>
+				<input type="password" id="password" name="password">
+			</div>
+			<br>
+			<div>
+				<label for="number">Number: </label>
+				<input type="number" step="2" min="0" max="10" id="number" name="number">
+			</div>
+			<br>
+			<div>
+				<label>Gender: </label>
+				<input type="radio" checked name="gender"> : Male
+				<input type="radio" name="gender"> : Female
+				<input type="radio" name="gender"> : Other
+			</div>
+			<br>
+			<div>
+				<label for="aggrement">Aggrement: </label>
+				<input type="checkbox" id="aggrement" name="check">
+			</div>
+			<br>
+			<select>
+				<option value="" disabled selected>Select an option</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+				<option value="4">Option 4</option>
+			</select>
+			<br>
+			<button type="submit">Submit</button>
+			<button type="button">Cancel</button>
+			<button type="reset">Reset</button>
+		</form>
+		<ol type="i">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ol>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+	</body>
+</html>
