@@ -1,0 +1,13 @@
+.mybutton{
+	border: 1px solid #eee;
+	background-color: : #eee;
+	font-size: 18px;
+	padding: 5px 8px;
+	border-radius: 4px;
+}
+.my-div{
+	display: inline-block;
+	width: 32%;
+	background-color: yellow;
+	border: 1px solid green;
+}
