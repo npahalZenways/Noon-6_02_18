@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "sourceMap": true,
+        "target": "es5",
+        "experimentalDecorators": true
+    },
+    "files":[
+        "feb_09.ts",
+        "feb_09_2.ts"
+    ]
+}
