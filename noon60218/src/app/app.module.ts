@@ -3,6 +3,7 @@ import { NgModule, Component } from '@angular/core';
 
 import { HeaderComp } from "./header/header";
 import { AppComponent } from './app.component';
+import { FormsModule } from "@angular/forms";
 
 // @Component({
 //   selector: 'header',
@@ -21,7 +22,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     // All modules
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     // all services

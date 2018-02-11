@@ -1,6 +1,99 @@
-<p>
-  This is my app component
-</p>
+<!-- Two types of data binding -->
 
-<header></header>
-<header></header>
+<!-- One-way bindings -->
+<!-- Interpolation -->
+<p>Title of this application is {{title}}</p>
+
+<!-- property binding uing [] data-direction = component to view -->
+<!-- <img [src]="imageSource"> -->
+<!-- style binding -->
+<p [style.color]="myStyle">This is a para</p>
+<!-- class binding -->
+<div [class.hello]="condition">abc div</div>
+
+<!-- Event binding () -->
+<p (click)="clickevent($event)">This is a para with an event binded</p>
+
+<button (click)="imageSource = 'http://www.clker.com/cliparts/3/m/v/Y/E/V/small-red-apple-hi.png'">Image 1</button>
+<button (click)="imageSource = 'http://adminnews24.info/wp-content/uploads/2017/05/small-pictures-20-the-data-lab.jpg'">Image 2</button>
+<button (click)="imageSource = 'https://openclipart.org/download/216413/coniglio_rabbit_small.svg'">Image 3</button>
+
+<!-- Two-way bindings -->
+<!-- <input type="text" [ngModel]="imageSource" (ngModelChange)="imageSource = $event"> -->
+<input type="text" [(ngModel)]="imageSource">
+
+<!-- Local template variable -->
+
+<p #para (click)="clickevent(para)">This is local</p>
+
+<!-- Built-in directives -->
+
+<button (click)="condition ? condition = false : condition = true">Toggle</button>
+
+<!-- *ngIf -->
+<!-- 
+<ng-template [ngIf]="condition">
+
+</ng-template> -->
+
+<div *ngIf="condition; else elseBlock">
+    <p>This is true</p>
+</div>
+<ng-template #elseBlock>
+    <div>
+        <p>
+            This is false
+        </p>
+        <h1>
+            False heading
+        </h1>
+    </div>
+</ng-template>
+
+<!-- [ngSwitch] -->
+
+<input type="text" [(ngModel)]="title">
+
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'app'">This is app</p>
+    <p *ngSwitchCase="'myapp'">This is my app</p>
+    <p *ngSwitchCase="'newapp'">This is my new app</p>
+    <p *ngSwitchDefault>This is default</p>
+</div>
+
+<!-- *ngFor -->
+<!-- <p *ngFor="let item of myarray">{{item}}</p> -->
+
+<table style="display:inline-table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+    </tr>
+    <tr *ngFor="let student of students; let i = index; let e = even">
+        <td *ngIf="e">{{i+1}}</td>
+        <td *ngIf="e">
+            {{student.name}}
+        </td>
+        <td *ngIf="e">
+            {{student.phone}}
+        </td>
+    </tr>
+</table>
+
+<table style="display:inline-table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Phone</th>
+    </tr>
+    <tr *ngFor="let student of students; let i = index; let e = even">
+        <td *ngIf="!e">{{i+1}}</td>
+        <td *ngIf="!e">
+            {{student.name}}
+        </td>
+        <td *ngIf="!e">
+            {{student.phone}}
+        </td>
+    </tr>
+</table>
