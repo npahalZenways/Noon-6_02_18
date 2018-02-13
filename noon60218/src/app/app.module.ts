@@ -9,6 +9,7 @@ import { RoutingComponent } from './routing/routing.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsComponent } from "./forms/forms.component";
 
 const route : Route[] = [{
 
@@ -31,7 +32,8 @@ const route : Route[] = [{
     RoutingComponent,
     AboutusComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FormsComponent
   ],
   imports: [
     // All modules

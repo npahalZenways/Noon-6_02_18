@@ -1,0 +1,21 @@
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && submit()">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" ngModel #name="ngModel" name="name" minlength="10" required>
+        <div *ngIf="name.errors">
+            <small style="color: red" *ngIf="name.errors.required && name.touched">This is required</small>
+            <small style="color: blue" *ngIf="name.errors.minlength && name.touched">{{name.errors.minlength.requiredLength - name.errors.minlength.actualLength}} more characters required</small>
+        </div>
+    </div>
+    <div>
+        <label for="pan">PAN card</label>
+        <input type="pan" id="pan" ngModel #pan="ngModel" name="pancard" required pattern="^[A-Z]{5}[0-9]{4}[A-Z]$">
+        <div *ngIf="pan.errors">
+            <small style="color: red" *ngIf="pan.errors.required && pan.touched">pan is required</small>
+            <small style="color: red" *ngIf="pan.errors.pattern && pan.touched">Enter valid PAN number</small>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Cancel</button>
+</form>
