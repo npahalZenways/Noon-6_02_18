@@ -4,6 +4,15 @@ import { NgModule, Component } from '@angular/core';
 import { HeaderComp } from "./header/header";
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
+import { RouterModule, Route } from "@angular/router";
+import { RoutingComponent } from './routing/routing.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+const route : Route[] = [{
+
+}]
 
 // @Component({
 //   selector: 'header',
@@ -18,12 +27,37 @@ import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComp
+    HeaderComp,
+    RoutingComponent,
+    AboutusComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     // All modules
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([{
+      path: '',
+      redirectTo: 'login',
+      pathMatch: 'full'
+    },{
+      path: 'login',
+      component: LoginComponent
+    },{
+      path: 'dashboard/:username/:password',
+      component: DashboardComponent,
+      children: [{
+        path: 'header',
+        component: HeaderComp
+      }, {
+        path: 'about',
+        component: AboutusComponent
+      }]
+    }, {
+      path: 'admin',
+      loadChildren:'./admin.module#AdminModule'
+    }])
   ],
   providers: [
     // all services

@@ -41,6 +41,10 @@ export class AppComponent {
     return this.title;
   }
 
+  printoutput(event){
+    console.log('output received', event);
+  }
+
   clickevent(e){
     console.log('clicked', this.para);
   }
