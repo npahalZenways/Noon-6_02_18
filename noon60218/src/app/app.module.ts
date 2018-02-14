@@ -14,6 +14,7 @@ import { NewserviceService } from "./newservice.service";
 // import { MyService } from "./service/myservice";
 import { HttpModule, Http } from "@angular/http";
 import { MyPipe } from "./Pipes/mypipe";
+import { MyDirective } from "./directive/mydirective";
 
 const route : Route[] = [{
 
@@ -38,7 +39,8 @@ const route : Route[] = [{
     LoginComponent,
     DashboardComponent,
     FormsComponent,
-    MyPipe
+    MyPipe,
+    MyDirective
   ],
   imports: [
     // All modules
