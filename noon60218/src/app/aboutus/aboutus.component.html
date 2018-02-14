@@ -1,3 +1,46 @@
+<form #setBase = "ngForm" (ngSubmit)="callAPI()">
+  <input type="text" #base="ngModel" [(ngModel)]="mybase" name="base">
+  <button>Submit</button>
+</form>
+
+
 <p>
-  aboutus works!
+  <!-- Date pipe -->
+  Date of now: {{date | date:'yyyy - MM - dd hh:mm a'}}
 </p>
+
+<p>
+  <!-- number pipe -->
+<!-- {{minimum digits before decimal}}.{{minimum digits after deicmal}} - {{maximum digits after decimal}} -->
+  Number : {{mynumber | number:'10.2-3'}}
+</p>
+
+<p>
+  <!-- Currency pipe -->
+  Currency: {{mynumber | currency:'INR':'code':'6.2-3'}}
+</p>
+
+<p>
+  {{str | uppercase}}
+</p>
+
+<div>
+  <input type="text" [(ngModel)]="query" placeholder="Search by name">
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Marks
+      </th>
+    </tr>
+    <tr *ngFor="let person of myarray | custom : query">
+      <td>{{person.name}}</td>
+      <td>{{person.marks}}</td>
+    </tr>
+  </table>
+</div>

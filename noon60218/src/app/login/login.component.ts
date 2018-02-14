@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   username;
   password;
   error;
+  initial = 'hello';
   constructor(private myrouter: Router) { }
   login(){
     if(this.username == 'admin' && this.password == 'admin@123'){

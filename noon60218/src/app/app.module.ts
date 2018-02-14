@@ -10,6 +10,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsComponent } from "./forms/forms.component";
+import { NewserviceService } from "./newservice.service";
+// import { MyService } from "./service/myservice";
+import { HttpModule, Http } from "@angular/http";
+import { MyPipe } from "./Pipes/mypipe";
 
 const route : Route[] = [{
 
@@ -33,10 +37,12 @@ const route : Route[] = [{
     AboutusComponent,
     LoginComponent,
     DashboardComponent,
-    FormsComponent
+    FormsComponent,
+    MyPipe
   ],
   imports: [
     // All modules
+    HttpModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([{
@@ -63,7 +69,9 @@ const route : Route[] = [{
   ],
   providers: [
     // all services
+    // MyService,
+    NewserviceService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AboutusComponent]
 })
 export class AppModule { }
